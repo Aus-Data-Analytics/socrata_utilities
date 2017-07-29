@@ -8,7 +8,7 @@ MIME_TYPE_CSV = 'text/csv'
 MIME_TYPE_JSON = 'application/json'
 MIME_TYPE_GEOJSON = 'application/vnd.geo+json'
 
-def connect(url, payload, headers, return_mime_type=MIME_TYPE_JSON):
+def connect(url, payload, headers, return_type=MIME_TYPE_JSON):
     r = requests.get(url, headers=headers)
     print('attempting connection to {}...'.format(url))
     print('response was [{} {}]'.format(r.status_code, r.reason))
